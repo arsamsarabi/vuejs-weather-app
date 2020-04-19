@@ -1,4 +1,4 @@
-# movies-app
+# weather-app
 
 ## Project setup
 ```
