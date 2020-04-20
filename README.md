@@ -1,7 +1,8 @@
 # Weather App
 
 > Built with Vue js
-> 👨🏻‍💻[Arsam Sarabi](https://arsam.dev)
+
+👨🏻‍💻[Arsam Sarabi](https://arsam.dev)
 
 ## Running the app locally
 
