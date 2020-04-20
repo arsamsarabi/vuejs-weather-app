@@ -1,3 +1,13 @@
+:root {
+  --color-primary: #565a75;
+  --color-primary-light: #babbce;
+  --color-secondary: #b58890;
+  --color-secondary-light: #cdb6bc;
+  --color-accent: #cdc09b;
+  --color-black: #2f2f2f;
+  --color-white: #f9f9f9;
+}
+
 html,
 body,
 div,
@@ -159,9 +169,13 @@ body {
   font-family: Montserrat, sans-serif;
   font-size: 18px;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
 }
 #app {
-  width: 100vw;
-  height: 100vh;
+  width: 375px;
+  height: 812px;
   overflow: hidden;
 }

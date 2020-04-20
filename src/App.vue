@@ -14,17 +14,7 @@
         />
       </div>
 
-      <section class="weather-results" v-if="typeof weather.main !== 'undefined'">
-        <div class="location-details">
-          <div class="city">{{ weather.name }}, {{ weather.sys.country }}</div>
-          <div class="date">{{ datetime }}</div>
-        </div>
-        <div class="wheater-info">
-          <div class="temperature">{{ Math.round(weather.main.temp) }}°c</div>
-          <div class="condition">{{ weather.weather[0].main }}</div>
-          <div class="condition-desc">{{ weather.weather[0].description }}</div>
-        </div>
-      </section>
+      <WeatherInformation v-bind:weather="weather" v-bind:datetime="datetime" />
     </main>
   </div>
 </template>
@@ -32,8 +22,13 @@
 <script>
 import dayjs from 'dayjs'
 
+import WeatherInformation from './components/WeatherInformation'
+
 export default {
   name: 'App',
+  components: {
+    WeatherInformation,
+  },
   data() {
     return {
       location: '',
@@ -68,6 +63,7 @@ export default {
   background-size: 350% 100%;
   background-position: -550px;
   background-repeat: no-repeat;
+  transition: 0.5s all ease-in-out;
 }
 
 #app.warm {
@@ -96,7 +92,7 @@ main {
   background-color: rgba(0, 0, 0, 0.25);
   padding: 8px 16px;
   font-size: 1.25rem;
-  color: #f9f9f9;
+  color: var(--color-white);
   border-radius: 8px 0 8px 0;
   transition: 0.4s all ease-out;
 
@@ -109,7 +105,7 @@ main {
 }
 
 ::placeholder {
-  color: #f1f1f1;
+  color: var(--color-white);
   opacity: 1;
 }
 </style>
