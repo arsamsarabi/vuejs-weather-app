@@ -8,5 +8,3 @@
 - Copy & paste `.env.example`
 - Rename to `.env`
 - Add your own [Open Weather](https://openweathermap.org/api) API Key to the `VUE_APP_API_KEY` environment variable
-
-<img src="public/images/screenshot.png" alt="screenshot" style="width:200px;height:auto;">
