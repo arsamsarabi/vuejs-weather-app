@@ -14,7 +14,7 @@
         />
       </div>
 
-      <WeatherInformation v-bind:weather="weather" v-bind:datetime="datetime" />
+      <WeatherInformation :weather="weather" :datetime="datetime" />
     </main>
   </div>
 </template>
