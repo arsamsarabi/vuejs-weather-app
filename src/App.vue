@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import dayjs from 'dayjs'
+import dayjs from "dayjs";
 
-import WeatherInformation from './components/WeatherInformation'
-import WeatherForm from './components/WeatherForm'
+import WeatherInformation from "./components/WeatherInformation";
+import WeatherForm from "./components/WeatherForm";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     WeatherInformation,
     WeatherForm,
@@ -28,26 +28,26 @@ export default {
   data() {
     return {
       weather: {},
-    }
+    };
   },
   methods: {
     fetchWeather(location, unit) {
-      const fetchUrl = `${process.env.VUE_APP_API_BASE_URL}weather?q=${location}&units=${unit}&APPID=${process.env.VUE_APP_API_KEY}`
+      const fetchUrl = `${process.env.VUE_APP_API_BASE_URL}weather?q=${location}&units=${unit}&APPID=${process.env.VUE_APP_API_KEY}`;
       fetch(fetchUrl)
         .then(res => res.json())
         .then(data => {
-          this.weather = data
-        })
+          this.weather = data;
+        });
     },
   },
   computed: {
     datetime: function() {
       return dayjs()
-        .add(this.weather.timezone, 'second')
-        .format('DD MMM YYYY')
+        .add(this.weather.timezone, "second")
+        .format("dddd DD MMM YYYY");
     },
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -77,5 +77,7 @@ main {
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
   padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 </style>

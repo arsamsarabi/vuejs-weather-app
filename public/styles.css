@@ -6,6 +6,9 @@
   --color-accent: #cdc09b;
   --color-black: #2f2f2f;
   --color-white: #f9f9f9;
+
+  --border-r-1: 8px 0 8px 0;
+  --border-r-2: 0 8px 0 8px;
 }
 
 html,
@@ -124,7 +127,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
