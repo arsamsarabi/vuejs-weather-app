@@ -1,7 +1,6 @@
 # Weather App
 
 > Built with Vue js
->
 > 👨🏻‍💻[Arsam Sarabi](https://arsam.dev)
 
 ## Running the app locally
@@ -10,4 +9,4 @@
 - Rename to `.env`
 - Add your own [Open Weather](https://openweathermap.org/api) API Key to the `VUE_APP_API_KEY` environment variable
 
-![Current state](public/images/screenshot.png)
+<img src="public/images/screenshot.png" alt="screenshot" style="width:200px;height:auto;">
