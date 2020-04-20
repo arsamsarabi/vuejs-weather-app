@@ -174,8 +174,3 @@ body {
   align-items: center;
   background-color: var(--color-black);
 }
-#app {
-  width: 375px;
-  height: 812px;
-  overflow: hidden;
-}
