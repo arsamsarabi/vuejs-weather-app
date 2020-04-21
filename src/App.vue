@@ -52,12 +52,12 @@ export default {
 
 <style lang="scss">
 #app {
-  width: 375px;
-  height: 812px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   background-image: url(./assets/images/bg.svg);
   background-size: 350% 100%;
-  background-position: -550px;
+  background-position: center;
   background-repeat: no-repeat;
   transition: 0.5s all ease-in-out;
 }
